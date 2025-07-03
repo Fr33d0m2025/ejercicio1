@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="PersonalForm">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre"><br><br>
+
+    <label for="edad">Edad:</label><br>
+    <input type="number" id="edad" name="edad"><br><br>
+
+    <input type="submit" value="Enviar datos">
+  </form>
+
+  <script>
+    const formulario = document.getElementById("PersonalForm");
+
+    formulario.addEventListener("submit", function(event) {
+      event.preventDefault(); // evita que el formulario se envíe y recargue la página
+      
+      const nombre = document.getElementById("nombre").value;
+      const edad = document.getElementById("edad").value;
+      
+      alert(`Nombre: ${nombre}\nEdad: ${edad}`);
+    });
+    
+  </script>
+</body>
+</html>
